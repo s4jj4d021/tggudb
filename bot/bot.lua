@@ -1,11 +1,3 @@
-----------------------------------------------------
---      ___  ___ _____            __   _____      --
---     |   \| _ )_   _|__ __ _ _ _\ \ / /_  )     --
---     | |) | _ \ | |/ -_) _` | '  \ V / / /      --
---     |___/|___/ |_|\___\__,_|_|_|_\_/ /___|     --
---                                                --
-----------------------------------------------------
-
 package.path = package.path ..';.luarocks/share/lua/5.2/?.lua' .. ';./bot/?.lua'
 package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
 
@@ -203,7 +195,7 @@ function msg_valid(msg)
     -- Don't process outgoing messages
     if msg.from.id == 0 then
         print('\27[36mNot valid: msg from us\27[39m')
-        return false
+        return true
     end
 
     -- Before bot was started
